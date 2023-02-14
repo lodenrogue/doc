@@ -112,7 +112,12 @@ function print_all() {
     print_search
 }
 
+function find_keyword() {
+    print_all | grep "$1"
+}
+
 case "$1" in
+    -f                ) find_keyword "$2";;
     gen | general     ) print_general;;
     cs  | cheat       ) print_cheat_sheet;;
     covid             ) print_covid;;
