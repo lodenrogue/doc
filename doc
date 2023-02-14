@@ -1,0 +1,128 @@
+#! /usr/bin/env bash
+
+set -e
+
+lcyan="\033[1;36m"
+red="\033[0;31m"
+nc="\033[0m"
+
+function print_general() {
+    echo -e "${lcyan}=== General ===${nc}"
+    echo -e "    ${red}bs${nc}                      -- billshare"
+    echo -e "    ${red}c${nc}                       -- alias clear terminal"
+    echo -e "    ${red}em${nc}                      -- send email"
+    echo -e "    ${red}meal${nc}                    -- create meal for given menu and calories"
+    echo -e "    ${red}dnots${nc}                   -- output dark night of the soul"
+    echo -e "    ${red}space${nc}                   -- estimate storage space used and available"
+    echo -e "    ${red}tao${nc}                     -- tao te ching verse"
+    echo -e "    ${red}weather${nc}                 -- get weather"
+    echo
+}
+
+function print_cheat_sheet() {
+    echo -e "${lcyan}=== Cheat Sheets ===${nc}"
+    echo -e "    ${red}cheat${nc}                   -- man page examples"
+    echo -e "    ${red}pycheat${nc}                 -- cheat sheet for python"
+    echo
+}
+
+function print_covid() {
+    echo -e "${lcyan}=== Covid ===${nc}"
+    echo -e "    ${red}covid${nc}                   -- get covid data"
+    echo -e "    ${red}covid_broward${nc}           -- plot broward covid data"
+    echo -e "    ${red}covid_florida${nc}           -- plot florida covid data"
+    echo -e "    ${red}covid_us${nc}                -- plot us covid data"
+    echo
+}
+
+function print_development() {
+    echo -e "${lcyan}=== Development ===${nc}"
+    echo -e "    ${red}ide${nc}                     -- open custom tmux ide"
+    echo -e "    ${red}ij${nc}                      -- open intellij"
+    echo -e "    ${red}mkenv${nc}                   -- create python3 environment"
+    echo -e "    ${red}projects${nc}                -- find git projects"
+    echo
+}
+
+function print_encryption() {
+    echo -e "${lcyan}=== Encryption ===${nc}"
+    echo -e "    ${red}decrypt${nc}                 -- decrypt given file to destination"
+    echo -e "    ${red}encrypt${nc}                 -- encrypt given file"
+    echo
+}
+
+function print_file() {
+    echo -e "${lcyan}=== File ===${nc}"
+    echo -e "    ${red}count_lines${nc}             -- count lines of files in current directory"
+    echo -e "    ${red}csv2tab${nc}                 -- convert csv data to tsv data"
+    echo
+}
+
+function print_github() {
+    echo -e "${lcyan}=== Github ===${nc}"
+    echo -e "    ${red}gfi${nc}                     -- navigate to github good first issue page"
+    echo -e "    ${red}github${nc}                  -- open github in browser"
+    echo -e "    ${red}github_resume${nc}           -- open github resume in browser"
+    echo
+}
+
+function print_hardware() {
+    echo -e "${lcyan}=== Hardware ===${nc}"
+    echo -e "    ${red}disable_middle_click${nc}    -- disable middle track pad click"
+    echo -e "    ${red}disable_touchscreen${nc}     -- disable touch screen"
+    echo -e "    ${red}enable_middle_click${nc}     -- enable middle track pad click"
+    echo -e "    ${red}enable_touchscreen${nc}      -- enable touch screen"
+    echo -e "    ${red}startup${nc}                 -- startup script"
+    echo -e "    ${red}temp${nc}                    -- cpu temperature"
+    echo
+}
+
+function print_navigation() {
+    echo -e "${lcyan}=== Navigation ===${nc}"
+    echo -e "    ${red}bills${nc}                   -- alias navigate to bills"
+    echo -e "    ${red}expenses${nc}                -- alias navigate to expenses app"
+    echo
+}
+
+function print_networking() {
+    echo -e "${lcyan}=== Networking ===${nc}"
+    echo -e "    ${red}list_open_ports${nc}         -- list open ports"
+    echo
+}
+
+function print_search() {
+    echo -e "${lcyan}=== Search ===${nc}"
+    echo -e "    ${red}ddg${nc}                     -- search on duck duck go"
+    echo -e "    ${red}sutta${nc}                   -- search suttas"
+    echo -e "    ${red}wiki${nc}                    -- search wikipedia"
+    echo
+}
+
+function print_all() {
+    print_general
+    print_cheat_sheet
+    print_covid
+    print_development
+    print_encryption
+    print_file
+    print_github
+    print_hardware
+    print_navigation
+    print_networking
+    print_search
+}
+
+case "$1" in
+    gen | general     ) print_general;;
+    cs  | cheat       ) print_cheat_sheet;;
+    covid             ) print_covid;;
+    dev | development ) print_development;;
+    enc | encryption  ) print_encryption;;
+    file              ) print_file;;
+    gh  | github      ) print_github;;
+    hardware          ) print_hardware;;
+    nav | navigation  ) print_navigation;;
+    net | networking  ) print_networking;;
+    search            ) print_search;;
+    all | *           ) print_all;;
+esac
