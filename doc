@@ -112,7 +112,7 @@ function print_all() {
 }
 
 function find_keyword() {
-    print_all | grep "$1"
+    print_all | grep -i "$1"
 }
 
 case "$1" in
