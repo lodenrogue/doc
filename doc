@@ -39,6 +39,7 @@ function print_development() {
     echo -e "    ${red}ij${nc}                      -- open intellij"
     echo -e "    ${red}mkenv${nc}                   -- create python3 environment"
     echo -e "    ${red}projects${nc}                -- find git projects"
+    echo -e "    ${red}sc${nc}                      -- alias shellcheck"
     echo
 }
 
