@@ -1,7 +1,5 @@
 #! /usr/bin/env bash
 
-set -e
-
 lcyan="\033[1;36m"
 red="\033[0;31m"
 nc="\033[0m"
